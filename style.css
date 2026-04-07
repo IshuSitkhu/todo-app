@@ -1,0 +1,178 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f4f6f9, #e9eef5);
+    padding: 20px;
+    color: #333;
+}
+
+/* TITLE */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 600;
+    letter-spacing: 1px;
+    color: #222;
+}
+
+h2 {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+    margin: 20px 0;
+    color: #333;
+    position: relative;
+}
+.no-tasks {
+    text-align: center;
+    color: #777;
+    font-size: 16px;
+    margin: 20px auto;
+    padding: 15px;
+    background: #fff;
+    width: 60%;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* ADD FORM */
+form {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+}
+
+/* INPUT + SELECT */
+input[type="text"],
+select {
+    padding: 12px 14px;
+    border: 1px solid #d0d7de;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.2s ease;
+    min-width: 200px;
+    font-size: 14px;
+}
+
+input[type="text"]:focus,
+select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0,123,255,0.15);
+}
+
+/* BUTTON BASE */
+button {
+    padding: 12px 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: white;
+    font-weight: 500;
+    transition: 0.2s ease;
+}
+
+/* BUTTON BASE (AESTHETIC STYLE) */
+button {
+    padding: 10px 32px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 13px;
+    transition: 0.2s ease;
+    border: 1px solid transparent;
+    background: #f8f9fa;
+    color: #333;
+}
+
+/* HOVER */
+button:hover {
+    transform: translateY(-1px);
+    background: #e9ecef;
+}
+
+/* ADD BUTTON */
+button[name="add"] {
+    background: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid #c8e6c9;
+}
+
+button[name="add"]:hover {
+    background: #d7f0d9;
+}
+
+/* UPDATE BUTTON */
+button[name="update"] {
+    background: #e3f2fd;
+    color: #1565c0;
+    border: 1px solid #bbdefb;
+}
+
+button[name="update"]:hover {
+    background: #d3eafd;
+}
+
+/* DELETE BUTTON */
+button[name="delete"] {
+    background: #ffebee;
+    color: #c62828;
+    border: 1px solid #ffcdd2;
+}
+
+button[name="delete"]:hover {
+    background: #ffdfe1;
+}
+
+/* TASK CARD */
+.task {
+    background: #fff;
+    padding: 15px;
+    margin: 12px auto;
+    width: 60%;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    transition: 0.2s ease;
+}
+
+.task:hover {
+    transform: scale(1.01);
+}
+
+/* TASK FORM INSIDE CARD */
+.task form {
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+
+    .task {
+        width: 90%;
+    }
+
+    form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    input[type="text"],
+    select {
+        width: 100%;
+    }
+
+    /* BUTTON FIX (IMPORTANT) */
+    button {
+        width: auto;
+        align-self: flex-start;
+    }
+}
